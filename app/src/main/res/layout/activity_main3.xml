@@ -4,55 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D0F4A8"
+    android:background="@color/monsterBackgroundFirst"
     tools:context=".MainActivity3">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <include
-        android:id="@+id/monster_layout"
-        layout="@layout/content_main3" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <Button
+        android:id="@+id/resetMonster"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_height="35dp"
+        android:layout_gravity="top|end"
         android:layout_margin="@dimen/fab_margin"
+        android:background="#98DF46"
+        android:text="@string/resetMonster"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <TextView
-        android:id="@+id/ball_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ball_header"
-        android:textColor="#FFFFFF"
+        android:id="@+id/textViewMonster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal|center_vertical"
+        android:text="@string/textView"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
-        app:layout_anchor="@+id/appBarLayout2"
-        app:layout_anchorGravity="center" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/happyMonster"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
     <ImageView
         android:id="@+id/happyMonster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/happyMonster"
-        app:layout_anchorGravity="center"
-        app:srcCompat="@drawable/sad" />
-
-    <TextView
-        android:id="@+id/textViewMonster"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textView"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/happy_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:srcCompat="@drawable/happymonster" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -60,8 +44,18 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:visibility="visible"
-        app:layout_anchor="@+id/ball_header"
+        app:layout_anchor="@+id/happy_header"
         app:layout_anchorGravity="center"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <TextView
+        android:id="@+id/happy_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/happy_header"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_anchorGravity="center"
+        android:layout_marginTop="6sp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

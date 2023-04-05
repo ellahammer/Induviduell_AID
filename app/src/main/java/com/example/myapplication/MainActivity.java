@@ -7,7 +7,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
@@ -18,7 +17,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity  {
 
     private Button acce_button;
-    private Button ball_button;
+    private Button monster_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +28,12 @@ public class MainActivity extends AppCompatActivity  {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "The mail function will be implemented in the future.", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
+        //Open Accelerometer activity
         acce_button = (Button) findViewById(R.id.acce_button);
         acce_button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,15 +41,14 @@ public class MainActivity extends AppCompatActivity  {
                 openActivityAcce();
             }
         });
-
-        ball_button = (Button) findViewById(R.id.ball_button);
-        ball_button.setOnClickListener(new View.OnClickListener(){
+        //Open Monster game activity
+        monster_button = (Button) findViewById(R.id.monster_button);
+        monster_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                openActivityBall();
+                openActivityMonster();
             }
         });
-
     }
 
     public void openActivityAcce() {
@@ -57,7 +56,7 @@ public class MainActivity extends AppCompatActivity  {
         startActivity(intent);
     }
 
-    public void openActivityBall() {
+    public void openActivityMonster() {
         Intent intent = new Intent(this, MainActivity3.class);
         startActivity(intent);
     }

@@ -14,12 +14,12 @@
     <string name="accelerometer_button">Open Accelerometer</string>
     <string name="title_activity_main2">MainActivity</string>
     <string name="next">Next</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="xyzValue">"Sensor Value"</string>
     <string name="title_activity_main3">MainActivity</string>
-    <string name="ball_header">Monster</string>
-    <string name="textView">TEST</string>
-    <string name="happyMonster">happyMonster</string>
+    <string name="happy_header"> Happy Monster</string>
+    <string name="textView">Shake me if you dare!</string>
+    <string name="resetMonster">Reset Monster</string>
+
 
 
 </resources>

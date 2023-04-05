@@ -6,7 +6,5 @@
     <color name="screenBackground">#2196F3</color>
     <color name="screenBackground2">#26C6DA</color>
     <color name="buttonBackground">#BBDEFB</color>
-    <color name="monsterBackground1"><![CDATA[#BBDEFB]]></color>
-    <color name="monsterBackground2"><![CDATA[#BBDEFB]]></color>
-
+    <color name="monsterBackgroundFirst"><![CDATA[#D0F4A8]]></color>
 </resources>
